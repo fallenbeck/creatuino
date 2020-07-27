@@ -1,0 +1,42 @@
+# File that holds information of the data is should be written to the SD card
+# represented by the data in the output directory
+#
+# Each line (not starting with a #) in this file represents a music file or a
+# directory containing multiple media files.
+# Each line has 2 columns separated by a colon (";"):
+#   1. Target
+#   2. Source
+#
+# A target and a source can either refer to an individual file or to a
+# directory containing multiple files.
+# If the target is a file, the source must also be a file.
+# If the target is a directory, the source must also be a directory.
+# The file names in target directory will be automatically created
+# depending on the number of files in the source directory.
+#
+# Target
+# ------
+# The target refers to a location in the file system relative to the output
+# directory of the SD card script. If the output directory is "out" the first
+# target folder "01" will expand to "out/01".
+#
+# Targets can have up to 2 elements separated by a slash ("/").
+# 1. The first element is a numeric name with a length of 2 characters
+#    01 .. 99 representing a folder name.
+# 2. The (optional) second element is a numeric name with a length of 3 chars
+#    001 .. 999. It presents a name in the folder (the first element) of an
+#    MP3 audio file.
+#
+# Note: Only numeric names are allowed!
+#
+# Source
+# ------
+# The source refers to a location in the file system. It can either be an
+# absolute path (starting with a slash "/") or a path relative to the current
+# directory. The source name can also have spaces.
+01/001;/Volumes/Media/iTunes/iTunes Media/Music/ChilledCow/LoFi Hiphop Mix/1 A.M. Study Session.m4a
+01/002;/Volumes/Media/iTunes/iTunes Media/Music/ChilledCow/LoFi Hiphop Mix/2 A.M. Study Session.m4a
+01/003;/Volumes/Media/iTunes/iTunes Media/Music/ChilledCow/Beats to Relax_Study to/02 2019.m4a
+02;/Volumes/Media/iTunes/iTunes Media/Music/Kinder vom Kleistpark/Wir Kinder vom Kleistpark machen Musik
+03;/Volumes/Media/iTunes/iTunes Media/Music/Ritter Rost/Ritter Rost und das Einhorn
+04;/Volumes/Media/iTunes/iTunes Media/Music/Otfried Preußler/Der Räuber Hotzenplotz 3
